@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="coop-rpg" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/coop-rpg" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/coop-rpg" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Attack.h" />
+		<Unit filename="include/Dodge.h" />
+		<Unit filename="include/Entity.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/Ice.h" />
+		<Unit filename="include/Rat.h" />
+		<Unit filename="include/Skill.h" />
+		<Unit filename="include/Stag.h" />
+		<Unit filename="include/Status.h" />
+		<Unit filename="include/attackBoost.h" />
+		<Unit filename="include/dodgeSkill.h" />
+		<Unit filename="include/textGraphics.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Attack.cpp" />
+		<Unit filename="src/Dodge.cpp" />
+		<Unit filename="src/Entity.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Ice.cpp" />
+		<Unit filename="src/Rat.cpp" />
+		<Unit filename="src/Skill.cpp" />
+		<Unit filename="src/Stag.cpp" />
+		<Unit filename="src/Status.cpp" />
+		<Unit filename="src/attackBoost.cpp" />
+		<Unit filename="src/dodgeSkill.cpp" />
+		<Unit filename="src/textGraphics.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

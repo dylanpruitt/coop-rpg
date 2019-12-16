@@ -1,0 +1,98 @@
+# depslib dependency file v1.0
+1576283185 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\textgraphics.cpp
+	"textGraphics.h"
+	<windows.h>
+
+1576283180 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\textgraphics.h
+
+1576456117 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\main.cpp
+	<iostream>
+	"Game.h"
+	"Rat.h"
+
+1576422353 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\status.cpp
+	"Status.h"
+
+1576453989 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\status.h
+	<string>
+
+1576439182 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entity.h
+	<vector>
+	<string>
+	<random>
+	"Status.h"
+
+1576453699 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\entity.cpp
+	"Entity.h"
+	"textGraphics.h"
+	<iostream>
+
+1576455706 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\skill.cpp
+	"Skill.h"
+	<iostream>
+
+1576455710 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skill.h
+	<string>
+	<vector>
+	"Entity.h"
+	"textGraphics.h"
+
+1576432839 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\attack.cpp
+	"Attack.h"
+
+1576423593 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\attack.h
+	"Skill.h"
+
+1576432077 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\dodge.cpp
+	"Dodge.h"
+
+1576432107 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\dodge.h
+	"Status.h"
+
+1576433092 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\dodgeskill.cpp
+	"dodgeSkill.h"
+	"Dodge.h"
+
+1576432885 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\dodgeskill.h
+	"Skill.h"
+
+1576433613 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\ice.cpp
+	"Ice.h"
+
+1576433394 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\ice.h
+	"Skill.h"
+
+1576453414 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\stag.cpp
+	"Stag.h"
+	"Attack.h"
+	"dodgeSkill.h"
+	<random>
+
+1576437925 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\stag.h
+	"Entity.h"
+
+1576453109 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\rat.cpp
+	"Rat.h"
+	"Attack.h"
+
+1576453124 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\rat.h
+	<Entity.h>
+
+1576454177 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\attackboost.cpp
+	"attackBoost.h"
+
+1576454116 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\attackboost.h
+	<Skill.h>
+
+1576456343 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\game.h
+	<vector>
+	"Entity.h"
+
+1576456505 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\game.cpp
+	"Game.h"
+	"Skill.h"
+	"Attack.h"
+	"dodgeSkill.h"
+	"textGraphics.h"
+	<iostream>
+
