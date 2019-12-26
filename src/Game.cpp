@@ -1,12 +1,12 @@
 #include "Game.h"
-#include "Skill.h"
-#include "Attack.h"
-#include "attackBoost.h"
-#include "dodgeSkill.h"
+#include "skills/Skill.h"
+#include "skills/Attack.h"
+#include "skills/attackBoost.h"
+#include "skills/dodgeSkill.h"
 #include "textGraphics.h"
 #include "Rat.h"
 #include "lightningBug.h"
-#include "Pass.h"
+#include "skills/Pass.h"
 #include <iostream>
 
 Game::Game()
@@ -31,7 +31,7 @@ void Game::loop () {
         enemies.push_back (new Rat ());
         enemies.push_back (new Rat ());
         enemies.push_back (new Rat ());
-        enemies.push_back (new lightningBug ());
+        enemies.push_back (new Rat ());
         battle (enemies);
         enemies.clear ();
     }

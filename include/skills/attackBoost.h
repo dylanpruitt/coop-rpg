@@ -1,7 +1,7 @@
 #ifndef ATTACKBOOST_H
 #define ATTACKBOOST_H
 
-#include <Skill.h>
+#include <skills/Skill.h>
 
 class attackBoost : public Skill
 {

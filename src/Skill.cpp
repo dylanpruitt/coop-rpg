@@ -55,7 +55,14 @@ int Skill::get_player_target (std::vector <Entity*> combatants) {
             textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK); std::cout << " HP)" << std::endl;
         }
 
-        std::cin >> target_index;
+        bool index_is_valid = false;
+
+        while (!index_is_valid) {
+            std::cin >> target_index;
+            if (target_index >= 0 && target_index < valid_target_indices.size ()) {
+                index_is_valid = true;
+            }
+        }
     }
 
     return valid_target_indices [target_index];

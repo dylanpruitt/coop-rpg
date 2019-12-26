@@ -47,7 +47,9 @@
 		<Unit filename="include/Stag.h" />
 		<Unit filename="include/Status.h" />
 		<Unit filename="include/attackBoost.h" />
+		<Unit filename="include/attackBoosted.h" />
 		<Unit filename="include/dodgeSkill.h" />
+		<Unit filename="include/lightningBug.h" />
 		<Unit filename="include/textGraphics.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Attack.cpp" />
@@ -63,7 +65,9 @@
 		<Unit filename="src/Stag.cpp" />
 		<Unit filename="src/Status.cpp" />
 		<Unit filename="src/attackBoost.cpp" />
+		<Unit filename="src/attackBoosted.cpp" />
 		<Unit filename="src/dodgeSkill.cpp" />
+		<Unit filename="src/lightningBug.cpp" />
 		<Unit filename="src/textGraphics.cpp" />
 		<Extensions>
 			<code_completion />

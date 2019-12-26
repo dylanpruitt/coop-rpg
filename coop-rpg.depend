@@ -29,7 +29,7 @@
 	"Ice.h"
 	<iostream>
 
-1576455706 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\skill.cpp
+1577382039 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\skill.cpp
 	"Skill.h"
 	<iostream>
 
@@ -94,15 +94,16 @@
 	<vector>
 	"Entity.h"
 
-1577379517 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\game.cpp
+1577382221 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\game.cpp
 	"Game.h"
-	"Skill.h"
-	"Attack.h"
-	"attackBoost.h"
-	"dodgeSkill.h"
+	"skills/Skill.h"
+	"skills/Attack.h"
+	"skills/attackBoost.h"
+	"skills/dodgeSkill.h"
 	"textGraphics.h"
 	"Rat.h"
-	"Pass.h"
+	"lightningBug.h"
+	"skills/Pass.h"
 	<iostream>
 
 1576476210 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\fire.cpp
@@ -137,4 +138,22 @@
 
 1577381401 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\lightningbug.h
 	"Entity.h"
+
+1576455710 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\skill.h
+	<string>
+	<vector>
+	"Entity.h"
+	"textGraphics.h"
+
+1576423593 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\attack.h
+	"Skill.h"
+
+1577382216 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\attackboost.h
+	<skills/Skill.h>
+
+1576432885 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\dodgeskill.h
+	"Skill.h"
+
+1576806500 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\pass.h
+	"Skill.h"
 
