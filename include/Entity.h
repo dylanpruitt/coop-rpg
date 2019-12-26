@@ -25,6 +25,9 @@ class Entity
         int attack = 1;
         int defense = 1;
 
+        int level = 1;
+        int experience = 0;
+
         std::vector <Skill*> skills;
 
         std::vector <Status*> statuses;
@@ -38,6 +41,8 @@ class Entity
         void damage (Entity* target, int amount);
 
         virtual void AI (std::vector <Entity*> combatants);
+
+        void promote ();
     protected:
         int target_lowest_health_enemy (std::vector <Entity*> combatants);
 

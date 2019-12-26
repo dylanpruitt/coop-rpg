@@ -11,13 +11,17 @@ class Game
 
         std::vector <Entity*> players;
 
-        void battle (std::vector <Entity*> enemies);
+        void loop ();
     protected:
 
     private:
+        void battle (std::vector <Entity*> enemies);
+
         bool faction_members_remain (std::string faction, std::vector <Entity*> combatants);
 
-        void display_player_information (Entity* player);
+        void display_combatant_information (std::vector <Entity*> enemies);
+
+        void display_skills (Entity* player);
 
         void create_player ();
 

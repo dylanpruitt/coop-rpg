@@ -14,6 +14,7 @@ class Rat : public Entity
     protected:
 
     private:
+        int ai_times_attacked = 0;
 };
 
 #endif // RAT_H

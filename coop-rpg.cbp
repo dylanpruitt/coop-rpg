@@ -37,8 +37,11 @@
 		<Unit filename="include/Attack.h" />
 		<Unit filename="include/Dodge.h" />
 		<Unit filename="include/Entity.h" />
+		<Unit filename="include/Fire.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/Ice.h" />
+		<Unit filename="include/Lightning.h" />
+		<Unit filename="include/Pass.h" />
 		<Unit filename="include/Rat.h" />
 		<Unit filename="include/Skill.h" />
 		<Unit filename="include/Stag.h" />
@@ -50,8 +53,11 @@
 		<Unit filename="src/Attack.cpp" />
 		<Unit filename="src/Dodge.cpp" />
 		<Unit filename="src/Entity.cpp" />
+		<Unit filename="src/Fire.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/Ice.cpp" />
+		<Unit filename="src/Lightning.cpp" />
+		<Unit filename="src/Pass.cpp" />
 		<Unit filename="src/Rat.cpp" />
 		<Unit filename="src/Skill.cpp" />
 		<Unit filename="src/Stag.cpp" />

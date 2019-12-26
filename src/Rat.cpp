@@ -1,5 +1,7 @@
 #include "Rat.h"
 #include "Attack.h"
+#include "attackBoost.h"
+#include <iostream>
 
 Rat::Rat()
 {
@@ -8,9 +10,12 @@ Rat::Rat()
     max_health = 7;
 
     attack = 1;
-    defense = 1;
+    defense = 0;
+
+    experience = 1;
 
     skills.push_back (new Attack ());
+    skills.push_back (new attackBoost ());
 }
 
 Rat::~Rat()
@@ -19,10 +24,18 @@ Rat::~Rat()
 }
 
 void Rat::AI (std::vector <Entity*> combatants) {
-    const int ATTACK = 0;
+    const int ATTACK = 0, BOOST_ATTACK = 1;
 
     int target_index = target_random_enemy (combatants);
-    std::vector <Entity*> targets; targets.push_back (combatants [target_index]);
+    std::vector <Entity*> targets;
 
-    this->skills [ATTACK]->use (this, targets);
+    if (ai_times_attacked < 2) {
+        targets.push_back (combatants [target_index]);
+        this->skills [ATTACK]->use (this, targets);
+        ai_times_attacked++;
+    } else {
+        targets.push_back (this);
+        this->skills [BOOST_ATTACK]->use (this, targets);
+        ai_times_attacked = 0;
+    }
 }

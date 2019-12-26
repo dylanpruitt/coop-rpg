@@ -2,6 +2,8 @@
 #define STATUS_H
 #include <string>
 
+class Entity;
+
 class Status
 {
     public:
@@ -12,6 +14,9 @@ class Status
 
         int turns_left = 1;
 
+        virtual void on_ice_damage (Entity* parent) {};
+
+        virtual void on_battle_end (Entity* parent) {};
     protected:
 
     private:

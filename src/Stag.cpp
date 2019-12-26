@@ -12,6 +12,8 @@ Stag::Stag()
     attack = 2;
     defense = 2;
 
+    experience = 3;
+
     skills.push_back (new Attack ());
     skills.push_back (new dodgeSkill ());
 }

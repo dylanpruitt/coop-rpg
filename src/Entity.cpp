@@ -1,5 +1,8 @@
 #include "Entity.h"
 #include "textGraphics.h"
+#include "Fire.h"
+#include "Lightning.h"
+#include "Ice.h"
 #include <iostream>
 
 Entity::Entity()
@@ -61,6 +64,39 @@ void Entity::damage (Entity* target, int amount) {
     }
 }
 
+void Entity::promote () {
+    if (experience >= level * level * 4) {
+        std::cout << name << " has leveled up!" << std::endl;
+
+        max_health += rand () % 5 + 3;
+        health = max_health;
+
+        attack++;
+        defense++;
+
+        level++;
+
+        if (level == 2) {
+            std::vector <Skill*> skill_choices; skill_choices.push_back (new Fire ()); skill_choices.push_back (new Ice ()); skill_choices.push_back (new Lightning ());
+            std::cout << name << " can learn a new skill." << std::endl;
+            for (int j = 0; j < skill_choices.size (); j++) {
+                std::cout << "[";
+                textGraphics::changeTextColor (textGraphics::colors::RED, textGraphics::colors::BLACK); std::cout << j;
+                textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK);
+                std::cout << "] - " << skill_choices [j]->name << " (";
+
+                textGraphics::changeTextColor (textGraphics::colors::YELLOW, textGraphics::colors::BLACK);
+                std::cout << skill_choices [j]->energy_cost;
+                textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK);
+                std::cout << ") : " << skill_choices [j]->description << std::endl;
+            }
+            int input; std::cin >> input;
+
+            skills.push_back (skill_choices [input]);
+        }
+    }
+}
+
 void Entity::AI (std::vector <Entity*> combatants) {
     textGraphics::changeTextColor (textGraphics::colors::LIGHT_RED, textGraphics::colors::BLACK); std::cout << "[!] " << name << " AI not implemented!";
     textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK);
@@ -107,11 +143,7 @@ int Entity::target_random_enemy (std::vector <Entity*> combatants) {
         }
     }
 
-    std::random_device random;
-    std::mt19937 generator (random ());
-    std::uniform_int_distribution<> distribution (0, valid_indices.size () - 1);
-
-    int random_index = distribution (generator);
+    int random_index = rand () % (valid_indices.size () - 1);
 
     return valid_indices [random_index];
 }
