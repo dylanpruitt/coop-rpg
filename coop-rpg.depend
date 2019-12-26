@@ -90,19 +90,20 @@
 1577379265 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\attackboost.h
 	<Skill.h>
 
-1576475571 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\game.h
+1577383816 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\game.h
 	<vector>
-	"Entity.h"
+	"entities/Entity.h"
+	"Room.h"
 
-1577382221 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\game.cpp
+1577383828 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\game.cpp
 	"Game.h"
 	"skills/Skill.h"
 	"skills/Attack.h"
 	"skills/attackBoost.h"
 	"skills/dodgeSkill.h"
 	"textGraphics.h"
-	"Rat.h"
-	"lightningBug.h"
+	"entities/Rat.h"
+	"entities/lightningBug.h"
 	"skills/Pass.h"
 	<iostream>
 
@@ -139,10 +140,10 @@
 1577381401 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\lightningbug.h
 	"Entity.h"
 
-1576455710 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\skill.h
+1577383635 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\skill.h
 	<string>
 	<vector>
-	"Entity.h"
+	"entities/Entity.h"
 	"textGraphics.h"
 
 1576423593 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\attack.h
@@ -156,4 +157,29 @@
 
 1576806500 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\pass.h
 	"Skill.h"
+
+1577383865 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\room.h
+	"entities/Entity.h"
+	<vector>
+
+1577383625 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\entity.h
+	<vector>
+	<string>
+	<random>
+	"statuses/Status.h"
+
+1577379408 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\statuses\status.h
+	<string>
+
+1577383650 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\rat.h
+	<entities/Entity.h>
+
+1577381401 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\lightningbug.h
+	"Entity.h"
+
+1577383738 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\room.cpp
+	"Room.h"
+	"skills/Skill.h"
+	"textGraphics.h"
+	<iostream>
 

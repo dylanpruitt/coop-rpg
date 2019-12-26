@@ -1,7 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 #include <vector>
-#include "Entity.h"
+#include "entities/Entity.h"
+#include "Room.h"
+
 
 class Game
 {
@@ -15,13 +17,9 @@ class Game
     protected:
 
     private:
-        void battle (std::vector <Entity*> enemies);
+        Room room;
 
         bool faction_members_remain (std::string faction, std::vector <Entity*> combatants);
-
-        void display_combatant_information (std::vector <Entity*> enemies);
-
-        void display_skills (Entity* player);
 
         void create_player ();
 

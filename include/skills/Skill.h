@@ -2,7 +2,7 @@
 #define SKILL_H
 #include <string>
 #include <vector>
-#include "Entity.h"
+#include "entities/Entity.h"
 #include "textGraphics.h"
 
 class Skill

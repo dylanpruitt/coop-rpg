@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <random>
-#include "Status.h"
+#include "statuses/Status.h"
 
 class Skill;
 

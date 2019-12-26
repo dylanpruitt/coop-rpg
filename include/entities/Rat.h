@@ -1,7 +1,7 @@
 #ifndef RAT_H
 #define RAT_H
 
-#include <Entity.h>
+#include <entities/Entity.h>
 
 
 class Rat : public Entity
