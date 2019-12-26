@@ -1,6 +1,6 @@
 #include "Stag.h"
-#include "Attack.h"
-#include "dodgeSkill.h"
+#include "skills/Attack.h"
+#include "skills/dodgeSkill.h"
 #include <random>
 
 Stag::Stag()
@@ -9,10 +9,10 @@ Stag::Stag()
     max_health = 26;
     health = 26;
 
-    attack = 2;
+    attack = 3;
     defense = 2;
 
-    experience = 3;
+    experience = 5;
 
     skills.push_back (new Attack ());
     skills.push_back (new dodgeSkill ());

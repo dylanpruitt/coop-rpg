@@ -1,6 +1,6 @@
 #include "Rat.h"
-#include "Attack.h"
-#include "attackBoost.h"
+#include "skills/Attack.h"
+#include "skills/attackBoost.h"
 #include <iostream>
 
 Rat::Rat()
@@ -12,7 +12,7 @@ Rat::Rat()
     attack = 1;
     defense = 0;
 
-    experience = 1;
+    experience = 2;
 
     skills.push_back (new Attack ());
     skills.push_back (new attackBoost ());

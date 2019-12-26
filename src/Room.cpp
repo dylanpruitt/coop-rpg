@@ -23,7 +23,6 @@ Room::~Room()
 void Room::event (std::vector <Entity*> players) {
     if (encounter.size () > 0) {
         std::cout << "You encounter monsters!" << std::endl;
-        std::cout << encounter [0]->health;
         battle (players);
     }
 }
@@ -44,6 +43,7 @@ void Room::battle (std::vector <Entity*> players) {
 
                 std::vector <Status*> remaining_statuses;
                 for (int j = 0; j < players [i]->statuses.size (); j++) {
+                    players [i]->statuses [j]->on_parent_turn (players [i]);
                     players [i]->statuses [j]->turns_left--;
 
                     if (players [i]->statuses [j]->turns_left > 0) {
@@ -75,6 +75,16 @@ void Room::battle (std::vector <Entity*> players) {
         for (int i = 0; i < encounter.size (); i++) {
             if (encounter [i]->is_alive ()) {
                 encounter [i]->energy += 3;
+                std::vector <Status*> remaining_statuses;
+                for (int j = 0; j < encounter [i]->statuses.size (); j++) {
+                    encounter [i]->statuses [j]->on_parent_turn (encounter [i]);
+                    encounter [i]->statuses [j]->turns_left--;
+
+                    if (encounter [i]->statuses [j]->turns_left > 0) {
+                        remaining_statuses.push_back (encounter [i]->statuses [j]);
+                    }
+                }
+                encounter [i]->statuses.swap (remaining_statuses);
                 encounter [i]->AI (combatants);
             }
         }

@@ -1,4 +1,4 @@
-#include "attackBoost.h"
+#include "skills/attackBoost.h"
 #include "attackBoosted.h"
 #include <iostream>
 

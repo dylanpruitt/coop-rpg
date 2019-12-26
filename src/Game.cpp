@@ -1,10 +1,12 @@
 #include "Game.h"
 #include "skills/Skill.h"
 #include "skills/Attack.h"
+#include "skills/Ice.h"
 #include "skills/attackBoost.h"
 #include "skills/dodgeSkill.h"
 #include "textGraphics.h"
 #include "entities/Rat.h"
+#include "entities/poisonFungus.h"
 #include "entities/lightningBug.h"
 #include "skills/Pass.h"
 #include <iostream>
@@ -32,7 +34,7 @@ void Game::loop () {
         enemies.push_back (new Rat ());
         enemies.push_back (new Rat ());
         enemies.push_back (new Rat ());
-        enemies.push_back (new Rat ());
+        enemies.push_back (new poisonFungus ());
         room = Room (enemies);
         room.event (players);
         enemies.clear ();

@@ -1,7 +1,7 @@
 #ifndef FIRE_H
 #define FIRE_H
 
-#include <Skill.h>
+#include <skills/Skill.h>
 
 
 class Fire : public Skill

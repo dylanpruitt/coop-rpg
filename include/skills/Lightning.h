@@ -1,7 +1,7 @@
 #ifndef LIGHTNING_H
 #define LIGHTNING_H
 
-#include <Skill.h>
+#include <skills/Skill.h>
 
 
 class Lightning : public Skill

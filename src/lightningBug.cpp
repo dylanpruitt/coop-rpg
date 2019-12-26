@@ -1,6 +1,6 @@
 #include "lightningBug.h"
-#include "Lightning.h"
-#include "Fire.h"
+#include "skills/Lightning.h"
+#include "skills/Fire.h"
 
 lightningBug::lightningBug()
 {
@@ -11,7 +11,7 @@ lightningBug::lightningBug()
     attack = 2;
     defense = 0;
 
-    experience = 2;
+    experience = 4;
 
     skills.push_back (new Lightning ());
     skills.push_back (new Fire ());

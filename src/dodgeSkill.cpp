@@ -1,4 +1,4 @@
-#include "dodgeSkill.h"
+#include "skills/dodgeSkill.h"
 #include "Dodge.h"
 
 dodgeSkill::dodgeSkill()

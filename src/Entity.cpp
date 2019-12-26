@@ -1,8 +1,8 @@
 #include "Entity.h"
 #include "textGraphics.h"
-#include "Fire.h"
-#include "Lightning.h"
-#include "Ice.h"
+#include "skills/Fire.h"
+#include "skills/Lightning.h"
+#include "skills/Ice.h"
 #include <iostream>
 
 Entity::Entity()

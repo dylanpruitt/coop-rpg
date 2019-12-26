@@ -21,12 +21,12 @@
 	<random>
 	"Status.h"
 
-1576476714 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\entity.cpp
+1577385012 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\entity.cpp
 	"Entity.h"
 	"textGraphics.h"
-	"Fire.h"
-	"Lightning.h"
-	"Ice.h"
+	"skills/Fire.h"
+	"skills/Lightning.h"
+	"skills/Ice.h"
 	<iostream>
 
 1577382039 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\skill.cpp
@@ -51,39 +51,39 @@
 1576432107 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\dodge.h
 	"Status.h"
 
-1576433092 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\dodgeskill.cpp
-	"dodgeSkill.h"
+1577385003 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\dodgeskill.cpp
+	"skills/dodgeSkill.h"
 	"Dodge.h"
 
 1576432885 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\dodgeskill.h
 	"Skill.h"
 
-1576433613 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\ice.cpp
-	"Ice.h"
+1577385256 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\ice.cpp
+	"skills/Ice.h"
 
 1576433394 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\ice.h
 	"Skill.h"
 
-1577380152 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\stag.cpp
+1577386107 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\stag.cpp
 	"Stag.h"
-	"Attack.h"
-	"dodgeSkill.h"
+	"skills/Attack.h"
+	"skills/dodgeSkill.h"
 	<random>
 
 1576437925 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\stag.h
 	"Entity.h"
 
-1577379800 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\rat.cpp
+1577386121 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\rat.cpp
 	"Rat.h"
-	"Attack.h"
-	"attackBoost.h"
+	"skills/Attack.h"
+	"skills/attackBoost.h"
 	<iostream>
 
 1576475918 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\rat.h
 	<Entity.h>
 
-1577379935 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\attackboost.cpp
-	"attackBoost.h"
+1577384997 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\attackboost.cpp
+	"skills/attackBoost.h"
 	"attackBoosted.h"
 	<iostream>
 
@@ -95,14 +95,16 @@
 	"entities/Entity.h"
 	"Room.h"
 
-1577383828 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\game.cpp
+1577387431 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\game.cpp
 	"Game.h"
 	"skills/Skill.h"
 	"skills/Attack.h"
+	"skills/Ice.h"
 	"skills/attackBoost.h"
 	"skills/dodgeSkill.h"
 	"textGraphics.h"
 	"entities/Rat.h"
+	"entities/poisonFungus.h"
 	"entities/lightningBug.h"
 	"skills/Pass.h"
 	<iostream>
@@ -132,10 +134,10 @@
 1577378996 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\attackboosted.h
 	"Status.h"
 
-1577381685 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\lightningbug.cpp
+1577386115 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\lightningbug.cpp
 	"lightningBug.h"
-	"Lightning.h"
-	"Fire.h"
+	"skills/Lightning.h"
+	"skills/Fire.h"
 
 1577381401 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\lightningbug.h
 	"Entity.h"
@@ -168,8 +170,9 @@
 	<random>
 	"statuses/Status.h"
 
-1577379408 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\statuses\status.h
+1577386898 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\statuses\status.h
 	<string>
+	<vector>
 
 1577383650 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\rat.h
 	<entities/Entity.h>
@@ -177,9 +180,61 @@
 1577381401 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\lightningbug.h
 	"Entity.h"
 
-1577383738 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\room.cpp
+1577387227 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\room.cpp
 	"Room.h"
 	"skills/Skill.h"
 	"textGraphics.h"
 	<iostream>
+
+1577378996 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\statuses\attackboosted.h
+	"Status.h"
+
+1576432107 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\statuses\dodge.h
+	"Status.h"
+
+1576437925 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\stag.h
+	"Entity.h"
+
+1577386183 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\aether.cpp
+	"Aether.h"
+	"skills/Ice.h"
+	"reactIce.h"
+
+1577384762 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\aether.h
+	<Entity.h>
+
+1576433394 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\ice.h
+	"Skill.h"
+
+1577384543 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\statuses\reactice.h
+	<Status.h>
+
+1577385023 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\fire.h
+	<skills/Skill.h>
+
+1577385037 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\skills\lightning.h
+	<skills/Skill.h>
+
+1577385290 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\reactice.cpp
+	"reactIce.h"
+	"Entity.h"
+	"textGraphics.h"
+	<iostream>
+
+1577387056 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\haze.cpp
+	"Haze.h"
+	"Entity.h"
+	<iostream>
+
+1577387061 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\statuses\haze.h
+	<Status.h>
+
+1577387523 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\poisonfungus.cpp
+	"poisonFungus.h"
+	"Haze.h"
+	<iostream>
+	"textGraphics.h"
+
+1577387225 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\poisonfungus.h
+	<Entity.h>
 
