@@ -68,7 +68,7 @@ void Entity::promote () {
     if (experience >= level * level * 4) {
         std::cout << name << " has leveled up!" << std::endl;
 
-        max_health += rand () % 5 + 3;
+        max_health += rand () % 3 + 1;
         health = max_health;
 
         attack++;

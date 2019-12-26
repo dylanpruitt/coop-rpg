@@ -2,7 +2,7 @@
 #define GAME_H
 #include <vector>
 #include "entities/Entity.h"
-#include "Room.h"
+#include "Dungeon.h"
 
 
 class Game
@@ -17,9 +17,7 @@ class Game
     protected:
 
     private:
-        Room room;
-
-        bool faction_members_remain (std::string faction, std::vector <Entity*> combatants);
+        Dungeon dungeon;
 
         void create_player ();
 

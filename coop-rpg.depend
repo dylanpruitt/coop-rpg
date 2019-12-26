@@ -90,10 +90,10 @@
 1577379265 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\attackboost.h
 	<Skill.h>
 
-1577383816 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\game.h
+1577388926 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\game.h
 	<vector>
 	"entities/Entity.h"
-	"Room.h"
+	"Dungeon.h"
 
 1577387431 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\game.cpp
 	"Game.h"
@@ -237,4 +237,34 @@
 
 1577387225 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\poisonfungus.h
 	<Entity.h>
+
+1577387907 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\warhawk.cpp
+	"Warhawk.h"
+	"skills/Attack.h"
+	"skills/attackBoost.h"
+	"skills/Ice.h"
+
+1577387587 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\entities\warhawk.h
+	<Entity.h>
+
+1577388902 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\dungeon.h
+	"Room.h"
+	"Entity.h"
+	<vector>
+
+1577388808 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\demodungeon.cpp
+	"demoDungeon.h"
+	"entities/Rat.h"
+	"entities/poisonFungus.h"
+	"entities/Stag.h"
+	"entities/Aether.h"
+	"entities/lightningBug.h"
+	"entities/Warhawk.h"
+
+1577388398 c:\users\dylan\documents\programming projects 2019\coop-rpg\include\demodungeon.h
+	<Dungeon.h>
+
+1577388930 source:c:\users\dylan\documents\programming projects 2019\coop-rpg\src\dungeon.cpp
+	"Dungeon.h"
+	<iostream>
 

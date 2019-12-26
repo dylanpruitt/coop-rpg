@@ -5,9 +5,7 @@
 #include "skills/attackBoost.h"
 #include "skills/dodgeSkill.h"
 #include "textGraphics.h"
-#include "entities/Rat.h"
-#include "entities/poisonFungus.h"
-#include "entities/lightningBug.h"
+#include "demoDungeon.h"
 #include "skills/Pass.h"
 #include <iostream>
 
@@ -21,6 +19,7 @@ Game::Game()
         create_player ();
     }
 
+    dungeon = demoDungeon ();
 }
 
 Game::~Game()
@@ -29,26 +28,7 @@ Game::~Game()
 }
 
 void Game::loop () {
-    while (faction_members_remain ("player", players)) {
-        std::vector <Entity*> enemies;
-        enemies.push_back (new Rat ());
-        enemies.push_back (new Rat ());
-        enemies.push_back (new Rat ());
-        enemies.push_back (new poisonFungus ());
-        room = Room (enemies);
-        room.event (players);
-        enemies.clear ();
-    }
-}
-
-bool Game::faction_members_remain (std::string faction, std::vector <Entity*> combatants) {
-    bool members_alive = false;
-
-    for (int i = 0; i < combatants.size (); i++) {
-        if (combatants [i]->health > 0 && combatants [i]->faction == faction) { members_alive = true; }
-    }
-
-    return members_alive;
+    dungeon.loop (players);
 }
 
 void Game::create_player () {
