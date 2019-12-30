@@ -1,19 +1,18 @@
 #include "Game.h"
 #include "skills/Skill.h"
 #include "skills/Attack.h"
-#include "skills/Ice.h"
-#include "skills/attackBoost.h"
-#include "skills/dodgeSkill.h"
 #include "textGraphics.h"
 #include "demoDungeon.h"
 #include "skills/Pass.h"
+#include "utility.h"
 #include <iostream>
 
 Game::Game()
 {
     std::cout << "How many players are there? (2 - 3)" << std::endl;
     int number_of_players = 0;
-    std::cin >> number_of_players; if (number_of_players < 2 || number_of_players > 3) { number_of_players = 2; }
+    number_of_players = utility::integer_input ();
+    if (number_of_players < 2 || number_of_players > 3) { number_of_players = 2; }
 
     for (int i = 0; i < number_of_players; i++) {
         create_player ();
@@ -46,8 +45,5 @@ void Game::create_player () {
 
     player->skills.push_back (new Attack ());
     player->skills.push_back (new Pass ());
-    player->skills.push_back (new attackBoost ());
-    player->skills.push_back (new dodgeSkill ());
-
     players.push_back (player);
 }

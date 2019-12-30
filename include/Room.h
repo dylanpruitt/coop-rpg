@@ -14,9 +14,9 @@ class Room
 
         std::vector <Entity*> encounter;
 
-        void event (std::vector <Entity*> players);
+        virtual void event (std::vector <Entity*> players);
 
-    private:
+    protected:
         void battle (std::vector <Entity*> players);
 
         bool faction_members_remain (std::string faction, std::vector <Entity*> players);

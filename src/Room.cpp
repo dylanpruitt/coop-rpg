@@ -1,6 +1,7 @@
 #include "Room.h"
 #include "skills/Skill.h"
 #include "textGraphics.h"
+#include "utility.h"
 #include <iostream>
 
 Room::Room ()
@@ -59,12 +60,15 @@ void Room::battle (std::vector <Entity*> players) {
                 int skill_index = -1;
                 bool looping = true;
                 while (looping) {
-                    std::cin >> skill_index;
-                    if (players [i]->energy >= players [i]->skills [skill_index]->energy_cost) {
-                        looping = false;
-                    } else {
-                        std::cout << "Not enough energy!" << std::endl;
+                    skill_index = utility::integer_input ();
+                    if (skill_index >= 0 && skill_index < players [i]->skills.size ()) {
+                        if (players [i]->energy >= players [i]->skills [skill_index]->energy_cost) {
+                            looping = false;
+                        } else {
+                            std::cout << "Not enough energy!" << std::endl;
+                        }
                     }
+
                 }
 
                 players [i]->skills [skill_index]->use (players [i], combatants);

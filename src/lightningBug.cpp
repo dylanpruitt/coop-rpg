@@ -5,8 +5,8 @@
 lightningBug::lightningBug()
 {
     name = "Lightning Bug";
-    health = 13;
-    max_health = 13;
+    health = 17;
+    max_health = 17;
 
     attack = 2;
     defense = 0;

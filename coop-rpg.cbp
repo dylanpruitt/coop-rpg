@@ -14,6 +14,8 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
+					<Add directory="include/statuses" />
+					<Add directory="include/entities" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +26,8 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="include/statuses" />
+					<Add directory="include/entities" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,41 +38,59 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Attack.h" />
-		<Unit filename="include/Dodge.h" />
-		<Unit filename="include/Entity.h" />
-		<Unit filename="include/Fire.h" />
+		<Unit filename="include/Dungeon.h" />
 		<Unit filename="include/Game.h" />
-		<Unit filename="include/Ice.h" />
-		<Unit filename="include/Lightning.h" />
-		<Unit filename="include/Pass.h" />
-		<Unit filename="include/Rat.h" />
-		<Unit filename="include/Skill.h" />
-		<Unit filename="include/Stag.h" />
-		<Unit filename="include/Status.h" />
-		<Unit filename="include/attackBoost.h" />
-		<Unit filename="include/attackBoosted.h" />
-		<Unit filename="include/dodgeSkill.h" />
-		<Unit filename="include/lightningBug.h" />
+		<Unit filename="include/Room.h" />
+		<Unit filename="include/demoDungeon.h" />
+		<Unit filename="include/entities/Aether.h" />
+		<Unit filename="include/entities/Entity.h" />
+		<Unit filename="include/entities/Rat.h" />
+		<Unit filename="include/entities/Stag.h" />
+		<Unit filename="include/entities/Warhawk.h" />
+		<Unit filename="include/entities/lightningBug.h" />
+		<Unit filename="include/entities/poisonFungus.h" />
+		<Unit filename="include/skills/Attack.h" />
+		<Unit filename="include/skills/Fire.h" />
+		<Unit filename="include/skills/Ice.h" />
+		<Unit filename="include/skills/Lightning.h" />
+		<Unit filename="include/skills/Pass.h" />
+		<Unit filename="include/skills/Skill.h" />
+		<Unit filename="include/skills/attackBoost.h" />
+		<Unit filename="include/skills/dodgeSkill.h" />
+		<Unit filename="include/statuses/Dodge.h" />
+		<Unit filename="include/statuses/Haze.h" />
+		<Unit filename="include/statuses/Status.h" />
+		<Unit filename="include/statuses/attackBoosted.h" />
+		<Unit filename="include/statuses/reactIce.h" />
 		<Unit filename="include/textGraphics.h" />
+		<Unit filename="include/utility.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Aether.cpp" />
 		<Unit filename="src/Attack.cpp" />
 		<Unit filename="src/Dodge.cpp" />
+		<Unit filename="src/Dungeon.cpp" />
 		<Unit filename="src/Entity.cpp" />
 		<Unit filename="src/Fire.cpp" />
 		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Haze.cpp" />
 		<Unit filename="src/Ice.cpp" />
 		<Unit filename="src/Lightning.cpp" />
 		<Unit filename="src/Pass.cpp" />
 		<Unit filename="src/Rat.cpp" />
+		<Unit filename="src/Room.cpp" />
 		<Unit filename="src/Skill.cpp" />
 		<Unit filename="src/Stag.cpp" />
 		<Unit filename="src/Status.cpp" />
+		<Unit filename="src/Warhawk.cpp" />
 		<Unit filename="src/attackBoost.cpp" />
 		<Unit filename="src/attackBoosted.cpp" />
+		<Unit filename="src/demoDungeon.cpp" />
 		<Unit filename="src/dodgeSkill.cpp" />
 		<Unit filename="src/lightningBug.cpp" />
+		<Unit filename="src/poisonFungus.cpp" />
+		<Unit filename="src/reactIce.cpp" />
 		<Unit filename="src/textGraphics.cpp" />
+		<Unit filename="src/utility.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

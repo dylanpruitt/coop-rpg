@@ -49,6 +49,8 @@ class Entity
         int target_highest_health_enemy (std::vector <Entity*> combatants);
 
         int target_random_enemy (std::vector <Entity*> combatants);
+
+        void choose_new_skill ();
 };
 
 #endif // ENTITY_H

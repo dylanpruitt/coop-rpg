@@ -1,4 +1,5 @@
 #include "demoDungeon.h"
+#include "healRoom.h"
 #include "entities/Rat.h"
 #include "entities/poisonFungus.h"
 #include "entities/Stag.h"
@@ -8,14 +9,14 @@
 
 demoDungeon::demoDungeon()
 {
-    Room room; std::vector <Entity*> encounter;
+    Room* room; std::vector <Entity*> encounter;
 
     // F1
     encounter.push_back (new Rat ());
     encounter.push_back (new Rat ());
     encounter.push_back (new Rat ());
     encounter.push_back (new Rat ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F2
@@ -23,7 +24,7 @@ demoDungeon::demoDungeon()
     encounter.push_back (new Rat ());
     encounter.push_back (new Rat ());
     encounter.push_back (new Rat ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F3
@@ -31,7 +32,7 @@ demoDungeon::demoDungeon()
     encounter.push_back (new Rat ());
     encounter.push_back (new Rat ());
     encounter.push_back (new Rat ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F4
@@ -39,42 +40,46 @@ demoDungeon::demoDungeon()
     encounter.push_back (new Rat ());
     encounter.push_back (new lightningBug ());
     encounter.push_back (new lightningBug ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F5
+    room = new healRoom ();
+    rooms.push_back (room);
     // F6
     encounter.push_back (new Stag ());
     encounter.push_back (new Stag ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F7
     encounter.push_back (new lightningBug ());
     encounter.push_back (new lightningBug ());
     encounter.push_back (new Aether ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F8
     encounter.push_back (new Stag ());
     encounter.push_back (new Aether ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F9
     encounter.push_back (new Aether ());
     encounter.push_back (new Aether ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F10
+    room = new healRoom ();
+    rooms.push_back (room);
     // F11
     encounter.push_back (new Stag ());
     encounter.push_back (new lightningBug ());
     encounter.push_back (new lightningBug ());
     encounter.push_back (new poisonFungus ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F12
@@ -84,7 +89,7 @@ demoDungeon::demoDungeon()
     encounter.push_back (new Rat ());
     encounter.push_back (new Rat ());
     encounter.push_back (new Aether ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F13
@@ -92,20 +97,22 @@ demoDungeon::demoDungeon()
     encounter.push_back (new Stag ());
     encounter.push_back (new Stag ());
     encounter.push_back (new Stag ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F14
     encounter.push_back (new poisonFungus ());
     encounter.push_back (new poisonFungus ());
     encounter.push_back (new lightningBug ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
     // F15
+    room = new healRoom ();
+    rooms.push_back (room);
     // F16
     encounter.push_back (new Warhawk ());
-    room = Room (encounter);
+    room = new Room (encounter);
     rooms.push_back (room);
     encounter.clear ();
 }

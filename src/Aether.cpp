@@ -5,10 +5,10 @@
 Aether::Aether()
 {
     name = "Aether";
-    health = 18;
-    max_health = 18;
+    health = 22;
+    max_health = 22;
 
-    attack = 1;
+    attack = 3;
     defense = 4;
 
     experience = 6;

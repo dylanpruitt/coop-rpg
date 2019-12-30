@@ -14,7 +14,7 @@ class Dungeon
         void loop (std::vector <Entity*> players);
     protected:
         std::string name;
-        std::vector <Room> rooms;
+        std::vector <Room*> rooms;
     private:
         int room_number = 0;
 

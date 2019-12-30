@@ -6,10 +6,10 @@
 Rat::Rat()
 {
     name = "Rat";
-    health = 7;
-    max_health = 7;
+    health = 6;
+    max_health = 6;
 
-    attack = 1;
+    attack = 2;
     defense = 0;
 
     experience = 2;

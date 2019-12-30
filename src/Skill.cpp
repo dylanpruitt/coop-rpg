@@ -1,4 +1,5 @@
-#include "Skill.h"
+#include "skills/Skill.h"
+#include "utility.h"
 #include <iostream>
 
 Skill::Skill()
@@ -20,7 +21,7 @@ std::vector <Entity*> Skill::find_targets (std::vector <Entity*> combatants, int
     std::vector <Entity*> targets;
     std::vector <int> valid_target_indices;
 
-    for (int j = 0; j < combatants.size (); j++) {
+    for (unsigned int j = 0; j < combatants.size (); j++) {
         if (combatants [j]->is_alive ()) {
             valid_target_indices.push_back (j);
         }
@@ -36,9 +37,9 @@ std::vector <Entity*> Skill::find_targets (std::vector <Entity*> combatants, int
 
 int Skill::get_player_target (std::vector <Entity*> combatants) {
     std::vector <int> valid_target_indices;
-    int target_index = 0;
+    unsigned int target_index = 0;
 
-    for (int j = 0; j < combatants.size (); j++) {
+    for (unsigned int j = 0; j < combatants.size (); j++) {
         if (combatants [j]->is_alive ()) {
             valid_target_indices.push_back (j);
         }
@@ -46,7 +47,7 @@ int Skill::get_player_target (std::vector <Entity*> combatants) {
 
     if (valid_target_indices.size () > 1) {
         std::cout << "Choose a target:" << std::endl;
-        for (int j = 0; j < valid_target_indices.size (); j++) {
+        for (unsigned int j = 0; j < valid_target_indices.size (); j++) {
             std::cout << "[";
             textGraphics::changeTextColor (textGraphics::colors::RED, textGraphics::colors::BLACK); std::cout << j;
             textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK);
@@ -58,7 +59,7 @@ int Skill::get_player_target (std::vector <Entity*> combatants) {
         bool index_is_valid = false;
 
         while (!index_is_valid) {
-            std::cin >> target_index;
+            target_index = utility::integer_input ();
             if (target_index >= 0 && target_index < valid_target_indices.size ()) {
                 index_is_valid = true;
             }

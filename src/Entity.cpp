@@ -3,6 +3,9 @@
 #include "skills/Fire.h"
 #include "skills/Lightning.h"
 #include "skills/Ice.h"
+#include "skills/attackBoost.h"
+#include "skills/dodgeSkill.h"
+#include "utility.h"
 #include <iostream>
 
 Entity::Entity()
@@ -76,25 +79,40 @@ void Entity::promote () {
 
         level++;
 
-        if (level == 2) {
-            std::vector <Skill*> skill_choices; skill_choices.push_back (new Fire ()); skill_choices.push_back (new Ice ()); skill_choices.push_back (new Lightning ());
-            std::cout << name << " can learn a new skill." << std::endl;
-            for (int j = 0; j < skill_choices.size (); j++) {
-                std::cout << "[";
-                textGraphics::changeTextColor (textGraphics::colors::RED, textGraphics::colors::BLACK); std::cout << j;
-                textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK);
-                std::cout << "] - " << skill_choices [j]->name << " (";
-
-                textGraphics::changeTextColor (textGraphics::colors::YELLOW, textGraphics::colors::BLACK);
-                std::cout << skill_choices [j]->energy_cost;
-                textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK);
-                std::cout << ") : " << skill_choices [j]->description << std::endl;
-            }
-            int input; std::cin >> input;
-
-            skills.push_back (skill_choices [input]);
-        }
+        choose_new_skill ();
     }
+}
+
+void Entity::choose_new_skill () {
+    std::vector <Skill*> skill_options;
+    skill_options.push_back (new Fire ());
+    skill_options.push_back (new Ice ());
+    skill_options.push_back (new Lightning ());
+    skill_options.push_back (new dodgeSkill ());
+    skill_options.push_back (new attackBoost ());
+
+    std::vector <Skill*> skill_choices;
+    for (int i = 0; i < 3; i++) {
+        int random_index = rand () % skill_options.size ();
+        skill_choices.push_back (skill_options [random_index]);
+    }
+
+    std::cout << name << " can learn a new skill." << std::endl;
+    for (int j = 0; j < skill_choices.size (); j++) {
+        std::cout << "[";
+        textGraphics::changeTextColor (textGraphics::colors::RED, textGraphics::colors::BLACK); std::cout << j;
+        textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK);
+        std::cout << "] - " << skill_choices [j]->name << " (";
+
+        textGraphics::changeTextColor (textGraphics::colors::YELLOW, textGraphics::colors::BLACK);
+        std::cout << skill_choices [j]->energy_cost;
+        textGraphics::changeTextColor (textGraphics::colors::WHITE, textGraphics::colors::BLACK);
+        std::cout << ") : " << skill_choices [j]->description << std::endl;
+    }
+
+    int input = utility::integer_input ();
+
+    skills.push_back (skill_choices [input]);
 }
 
 void Entity::AI (std::vector <Entity*> combatants) {
@@ -143,7 +161,11 @@ int Entity::target_random_enemy (std::vector <Entity*> combatants) {
         }
     }
 
-    int random_index = rand () % (valid_indices.size () - 1);
+    int random_index = 0;
+
+    if (valid_indices.size () > 1) {
+        random_index = rand () % valid_indices.size ();
+    }
 
     return valid_indices [random_index];
 }

@@ -13,7 +13,7 @@ Dungeon::~Dungeon()
 
 void Dungeon::loop (std::vector <Entity*> players) {
     while (faction_members_remain ("player", players) && room_number < rooms.size ()) {
-        rooms [room_number].event (players);
+        rooms [room_number]->event (players);
         room_number++;
     }
 

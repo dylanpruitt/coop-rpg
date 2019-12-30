@@ -14,7 +14,7 @@ Ice::~Ice()
 
 void Ice::use (Entity *user, std::vector <Entity*> targets) {
     Skill::use (user, targets);
-    int damage = 2 + user->attack;
+    int damage = user->attack;
     if (user->faction == "player") {
         for (Entity* combatant : targets) {
             if (!(combatant->faction == "player") && combatant->is_alive ()) {
